@@ -1,0 +1,109 @@
+package SimpleInterest;
+
+import java.util.Scanner;
+
+public class Simple1 {
+
+	public static void main(String[] args) {
+
+		double principle, roi, time, si;
+
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("1.To Find Simple Interest");
+		System.out.println("2.To Find Principle amount");
+		System.out.println("3.To Find Rate of Interest");
+		System.out.println("4.To Find Time years");
+		System.out.println();
+
+		System.out.println("enter your chice");
+
+		int choice = sc.nextInt();
+		switch (choice) {
+		case 1:
+			System.out.println("enter principle amount");
+			principle = sc.nextInt();
+			System.out.println("enter rate of interest");
+			roi = sc.nextInt();
+			System.out.println("enter time in years");
+			double years = sc.nextInt();
+			System.out.println("enter time in months");
+			double months = sc.nextInt();
+			System.out.println("enter time in days");
+			double days = sc.nextInt();
+
+			time = years + months / 12.0 + days / 365;
+			System.out.println("Simple Interest=" + " principle*rateofinterest*time/100");
+			System.out.println("simple interst=" + principle + "*" + roi + "*" + time + "/" + 100);
+			double simpleinterest = (principle * time * roi) / 100;
+			System.out.println("Simple interest= RS  " + simpleinterest);
+
+			break;
+
+		case 2:
+			System.out.println("enter Simple Interest amount");
+			si = sc.nextInt();
+			System.out.println("enter rate of interest");
+			roi = sc.nextInt();
+			System.out.println("enter time in years");
+			years = sc.nextInt();
+			System.out.println("enter time in months");
+			months = sc.nextInt();
+			System.out.println("enter time in days");
+			days = sc.nextInt();
+
+			time = years + months / 12.0 + days / 365;
+			System.out.println("Principal amount=100*simpleinterest/time*rateofinterest");
+			System.out.println(100 + "*" + si + "/" + roi + "*" + time);
+
+			double Amount = (100 * si) / (roi * time);
+			System.out.println("Principal Amount= RS" + Amount);
+
+			break;
+
+		case 3:
+			System.out.println("enter principle amount");
+			principle = sc.nextInt();
+			System.out.println("enter simple interest");
+			si = sc.nextInt();
+			System.out.println("enter time in years");
+			years = sc.nextInt();
+			System.out.println("enter time in months");
+			months = sc.nextInt();
+			System.out.println("enter time in days");
+			days = sc.nextInt();
+
+			time = years + months / 12.0 + days / 365;
+			System.out.println();
+
+			System.out.println("R=100*si/P*T");
+			System.out.println("R=" + 100 + "*" + si + "/" + principle + "*" + time);
+
+			double RateofInterrest = (100 * si) / (principle * time);
+			System.out.println("Interest rate =" + RateofInterrest + "%" + "  PA");
+
+			break;
+		case 4:
+			System.out.println("enter simple interest");
+			si = sc.nextInt();
+			System.out.println("enter principle amount");
+			principle = sc.nextInt();
+			System.out.println("enter rate of interest");
+			roi = sc.nextInt();
+
+			System.out.println("T=100*SI/P*R");
+			System.out.println("T=" + 10 + "*" + si + "/" + principle * roi);
+
+			double timetaken = (100 * si) / (principle * roi);
+			System.out.println("Total time to get " + si + "" + timetaken + "years");
+
+			break;
+
+		default:
+			System.out.println("********you chosed wrong value**********");
+			System.out.println("enter correct value:");
+
+		}
+		sc.close();
+	}
+}
